@@ -1,0 +1,17 @@
+{{ $title  := .Title }}
+{{ $author := .Params.author }}
+{{ $date   := .Date | dateFormat "January 2, 2006" }}
+<section class="hero is-primary is-medium">
+  <div class="hero-body">
+    <div class="container">
+      <p class="title is-size-1 is-size-2-mobile has-text-weight-light is-spaced">
+        {{ $title }}
+      </p>
+
+      <p class="subtitle">
+        {{ with $date }}<span class="has-text-weight-light">{{ . }}</span>{{ end }}{{ if and $date $author }}&nbsp;&nbsp;&nbsp;<i class="fas fa-ellipsis-v"></i>&nbsp;&nbsp;&nbsp;{{ end }}
+        {{ with $author }}<span class="has-text-weight-bold">{{ . }}</span>{{ end }}
+      </p>
+    </div>
+  </div>
+</section>
