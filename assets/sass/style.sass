@@ -1,6 +1,3 @@
-{{ $colors             := site.Params.colors }}
-{{ $primary            := $colors.primary | default "#426cab" }}
-{{ $secondary          := $colors.secondary | default "#76c5d5" }}
 {{ $font               := site.Params.font }}
 {{ $fontPath           := printf "%s:%s" (replace $font.name " " "+") (delimit $font.sizes ",") }}
 {{ $fontsUrl           := printf "https://fonts.googleapis.com/css?family=%s" $fontPath }}
@@ -14,8 +11,11 @@
 @import "bulma/sass/utilities/initial-variables"
 @import "bulma/sass/utilities/functions"
 
-$primary: {{ $primary }}
-$secondary: {{ $secondary }}
+$lfdata-dark-blue: rgb(0, 55, 100)
+$lfdata-light-blue: rgb(0, 154, 222)
+
+$primary: $lfdata-dark-blue
+$secondary: $lfdata-light-blue
 
 $link: $secondary
 $link-weight: 700
