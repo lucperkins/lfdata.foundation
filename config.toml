@@ -5,9 +5,9 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [params]
 font_awesome_version = "5.13.0"
-description = "A foundation supporting good software"
+description = "A foundation supporting good software and stuff"
 copyright = "All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our [Trademark Usage](https://www.linuxfoundation.org/trademark-usage) page. Linux is a registered trademark of Linus Torvalds. [Privacy Policy](http://www.linuxfoundation.org/privacy) and [Terms of Use](http://www.linuxfoundation.org/terms). "
-github_repo = "https://github.com/my-foundation/my-foundation"
+github_repo = "https://github.com/lfdata"
 
 [params.logos]
 navbar = "lfdata-horizontal-color.png"
@@ -44,8 +44,8 @@ Cupidatat ut ea laborum do aliqua qui occaecat eu nisi dolore laboris in in cill
 """
 ]
 
-[params.font]
-name = "Work Sans"
+[[params.fonts]]
+name = "Noto Sans"
 sizes = [300, 400, 600, 700]
 type = "sans_serif"
 

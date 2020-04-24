@@ -1,5 +1,6 @@
 {
   "devDependencies": {
-    "bulma": "^0.7.5"
+    "bulma": "^0.7.5",
+    "pattern.css": "^1.0.0"
   }
 }

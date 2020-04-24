@@ -1,6 +1,6 @@
 {{ $home       := site.BaseURL }}
 {{ $logo       := site.Params.logos.navbar }}
-{{ $logoUrl    := printf "img/logos/%s" $logo }}
+{{ $logoUrl    := printf "img/logos/%s" $logo | relURL }}
 {{ $menu       := site.Menus.main }}
 {{ $currentUrl := .RelPermalink }}
 {{ $github     := site.Params.github_repo }}
