@@ -1,4 +1,4 @@
-title        = "LF Data Foundation"
+title        = "The LF Data Foundation"
 baseURL      = "https://lfdata-foundation.netlify.app"
 languageCode = "en-us"
 disableKinds = ["taxonomy", "taxonomyTerm"]
@@ -10,9 +10,9 @@ copyright = "All rights reserved. The Linux Foundation has registered trademarks
 github_repo = "https://github.com/my-foundation/my-foundation"
 
 [params.logos]
-navbar = "cncf-white.png"
-hero   = "cncf-stacked-color.png"
-footer = "cncf-icon-white.png"
+navbar = "lfdata-horizontal-color.png"
+hero   = "lfdata-icon-white.png"
+footer = "lfdata-stacked-white.png"
 
 [[params.info.columns]]
 title = "What does my foundation do?"
@@ -45,7 +45,7 @@ Cupidatat ut ea laborum do aliqua qui occaecat eu nisi dolore laboris in in cill
 ]
 
 [params.font]
-name = "Nunito Sans"
+name = "Work Sans"
 sizes = [300, 400, 600, 700]
 type = "sans_serif"
 

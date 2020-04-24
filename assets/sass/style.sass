@@ -8,25 +8,32 @@
 @import url("{{ $fontsUrl }}")
 @import url("{{ $fontAwesomeUrl }}")
 
-@import "bulma/sass/utilities/initial-variables"
-@import "bulma/sass/utilities/functions"
-
 $lfdata-dark-blue: rgb(0, 55, 100)
 $lfdata-light-blue: rgb(0, 154, 222)
 
 $primary: $lfdata-dark-blue
 $secondary: $lfdata-light-blue
 
+@import "bulma/sass/utilities/initial-variables"
+@import "bulma/sass/utilities/functions"
+
+@import "bulma/sass/utilities/derived-variables"
+
+
 $link: $secondary
 $link-weight: 700
 
 $family-sans-serif: "{{ $font.name }}", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
 $body-size: 16px
-$navbar-height: 4.5rem
+$navbar-height: 4rem
 $navbar-item-img-max-height: $navbar-height * 0.5
 $navbar-burger-color: $primary
 $navbar-dropdown-border-top: 1px solid $grey-light
 $section-padding: 3rem 1.5rem
+$footer-background-color: $black
+$footer-color: $light
+
+@import "bulma/bulma"
 
 .bottom-padding
   padding-bottom: 8rem
@@ -38,12 +45,6 @@ $section-padding: 3rem 1.5rem
 
   .main
     flex: 1
-
-@import "bulma/sass/utilities/derived-variables"
-
-@import "bulma/bulma"
-
-@import "footer"
 
 table.faq
   thead tr th
@@ -75,8 +76,6 @@ table.faq
   margin-top: 5rem
 
 .news-item
-  &-header
-    
   &-title
     font-size: 1.5rem
 
@@ -95,13 +94,27 @@ hr.home
 
 .is-hero-logo
   +mobile
-    width: 70%
+    width: 40%
     margin-bottom: 1.5rem
   +tablet
-    width: 40%
-    margin-bottom: 3rem
+    width: 50%
+
+.is-footer-logo
+  +mobile
+    width: 30%
+  +tablet
+    width: 50%
 
 .is-faq-content
   .faq
     & + .faq
       margin-top: 2rem
+
+.footer
+  padding: 4rem 1.5rem 6rem 1.5rem
+
+  a
+    color: $secondary
+
+    &:hover
+      color: $grey

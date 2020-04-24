@@ -1,12 +1,13 @@
+{{ $title   := site.Title }}
 {{ $year    := now.Year }}
 {{ $logo    := site.Params.logos.footer }}
 {{ $logoUrl := printf "img/logos/%s" $logo | relURL }}
 {{ $copy    := site.Params.copyright | markdownify }}
 <footer class="footer has-text-weight-light">
   <div class="container">
-    <div class="columns is-vcentered is-variable is-8">
-      <div class="column is-one-quarter has-text-centered">
-        <img class="footer-logo" src="{{ $logoUrl }}">
+    <div class="columns is-variable is-8">
+      <div class="column is-one-quarter">
+        <img class="is-footer-logo" src="{{ $logoUrl }}" alt="{{ $title }} footer logo">
       </div>
 
       <div class="column">

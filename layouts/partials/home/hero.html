@@ -5,14 +5,26 @@
 {{ $logo     := site.Params.logos.hero }}
 {{ $logoUrl  := printf "img/logos/%s" $logo | relURL }}
 {{ $desc     := site.Params.description }}
-<section class="hero has-background-white-bis">
+<section class="hero is-primary is-medium is-bold">
   <div class="hero-body">
-    <div class="container has-text-centered">
-      <img class="is-hero-logo" src="{{ $logoUrl }}">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-one-quarter">
+          <img class="is-hero-logo" src="{{ $logoUrl }}" alt="{{ $title }} hero logo">
+        </div>
 
-      <p class="title is-size-3 is-size-4-mobile has-text-weight-light">
-        {{ $desc }}
-      </p>
+        <div class="column">
+          <p class="title is-size-1 is-size-2-mobile has-text-weight-bold{{ if $desc }} is-spaced{{ end }}">
+            {{ $title }}
+          </p>
+
+          {{ with $desc }}
+          <p class="subtitle is-size-3 is-size-4-mobile has-text-weight-medium">
+            {{ . }}
+          </p>
+          {{ end }}
+        </div>
+      </div>
     </div>
   </div>
 </section>
