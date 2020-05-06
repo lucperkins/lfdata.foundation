@@ -86,6 +86,6 @@ url = "/faq"
 weight = 4
 
 [[menu.main]]
-name = "News"
-url = "/news"
+name = "Blog"
+url = "/blog"
 weight = 5

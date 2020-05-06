@@ -1,11 +1,11 @@
 {{ define "title" }}
-{{ site.Title }} | News
+{{ site.Title }} | Blog
 {{ end }}
 
 {{ define "main" }}
 {{ $currentSection := .CurrentSection.Title }}
 {{ $isRoot         := eq $currentSection .FirstSection.Title }}
-{{ $items          := where site.RegularPages "Section" "news" }}
+{{ $items          := where site.RegularPages "Section" "blog" }}
 
 {{ partial "hero.html" . }}
 
@@ -15,8 +15,8 @@
       {{ range $items }}
       {{ $author := .Params.author }}
       {{ $date   := .Date | dateFormat "January 2, 2006" }}
-      <div class="news-item">
-        <p class="news-item-title has-text-weight-light" href="{{ .RelPermalink }}">
+      <div class="blog-item">
+        <p class="blog-item-title has-text-weight-light" href="{{ .RelPermalink }}">
           {{ .Title }}
         </p>
 
@@ -25,7 +25,7 @@
           {{ with $author }}<span class="has-text-weight-bold">{{ . }}</span>{{ end }}
         </p>
 
-        <p class="news-item-summary">
+        <p class="blog-item-summary">
           {{ .Summary }}...
         </p>
 

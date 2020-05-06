@@ -1,12 +1,14 @@
-{{ $news := where site.RegularPages "Section" "news" }}
+{{ $posts := first 5 (where site.RegularPages "Section" "blog") }}
 <section class="section">
   <div class="container">
-    <p class="title is-size-2 is-size-3-mobile">
-      News
+    <p class="title is-size-2 is-size-3-mobile has-text-weight-medium">
+      Recent blog posts
     </p>
 
+    <br />
+
     <div class="columns is-multiline is-variable is-8">
-      {{ range $news }}
+      {{ range $posts }}
       {{ $date   := dateFormat "January 2, 2006" .Date }}
       {{ $author := .Params.author }}
       <div class="column is-half">
