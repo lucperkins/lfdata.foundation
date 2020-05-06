@@ -15,13 +15,13 @@ hero   = "lfdata-icon-white.png"
 footer = "lfdata-stacked-white.png"
 
 [[params.info.columns]]
-title = "What does my foundation do?"
+title = "What does the LFData foundation do?"
 content = """
 Dolor cupidatat tempor sint nulla ex esse irure sit commodo. Eiusmod irure reprehenderit commodo velit laborum consectetur in dolor non id sit culpa. Consectetur quis excepteur sint aliqua cupidatat. Occaecat non excepteur adipisicing excepteur eu est adipisicing fugiat eiusmod ut.
 """
 
 [[params.info.columns]]
-title = "How can I help?"
+title = "How can I get involved?"
 content = """
 Sit deserunt do proident magna tempor non dolore. Cupidatat nulla eiusmod esse proident id duis commodo ad non. Ipsum in est esse ad exercitation minim ea occaecat laborum cupidatat est sit nisi cupidatat. Quis culpa dolore elit duis sint. Nisi duis nulla irure qui sit. Proident dolor adipisicing sit ex.
 
@@ -45,7 +45,7 @@ Cupidatat ut ea laborum do aliqua qui occaecat eu nisi dolore laboris in in cill
 ]
 
 [[params.fonts]]
-name = "Noto Sans"
+name = "Open Sans"
 sizes = [300, 400, 600, 700]
 type = "sans_serif"
 

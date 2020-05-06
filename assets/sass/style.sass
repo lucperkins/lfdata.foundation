@@ -32,19 +32,20 @@ $body-size: 16px
 $navbar-height: 4rem
 $navbar-item-img-max-height: $navbar-height * 0.4
 $navbar-burger-color: $primary
-$navbar-dropdown-border-top: 1px solid $grey-light
-$section-padding: 3rem 1.5rem
+$navbar-dropdown-border-top: none
+$section-padding: 4rem 1.5rem 6rem 1.5rem
 $footer-background-color: $black
 $footer-color: $light
 
 @import "bulma/bulma"
 @import "pattern.css/pattern"
 
+$colors: mergeColorMaps(("secondary": ($secondary, $black)), $colors)
 
 $transform-time: 0.2s
 $transform-scale: 1.1
 
-.bottom-padding
+.has-extra-bottom-padding
   padding-bottom: 8rem
 
 .body

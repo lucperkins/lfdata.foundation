@@ -7,13 +7,13 @@
     <div class="columns is-variable is-8">
       {{ range . }}
       <div class="column">
-        <p class="title has-text-primary is-size-4 is-size-5-mobile has-text-weight-medium">
+        <p class="title has-text-primary is-size-3 is-size-4-mobile">
           {{ .title }}
         </p>
 
         <hr class="has-background-grey-lighter" />
 
-        <div class="content is-size-5 is-size-6-mobile has-text-weight-light">
+        <div class="content is-medium has-text-weight-medium">
           {{ .content | markdownify }}
         </div>
       </div>
@@ -23,16 +23,20 @@
 </section>
 {{ end }}
 
+<!--
 {{ with $explanation }}
-<section class="section has-background-grey-dark has-text-white">
+<section class="section has-background-light has-text-dark has-extra-bottom-padding">
   <div class="container">
     <div class="columns is-variable is-8">
       {{ range . }}
-      <div class="column content is-size-5 is-size-6-mobile has-text-weight-light">
-        {{ . | markdownify }}
+      <div class="column">
+        <div class="content is-medium has-text-weight-medium">
+          {{ . | markdownify }}
+        </div>
       </div>
       {{ end }}
     </div>
   </div>
 </section>
 {{ end }}
+-->

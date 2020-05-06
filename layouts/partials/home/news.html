@@ -1,0 +1,39 @@
+{{ $news := where site.RegularPages "Section" "news" }}
+<section class="section">
+  <div class="container">
+    <p class="title is-size-2 is-size-3-mobile">
+      News
+    </p>
+
+    <div class="columns is-multiline is-variable is-8">
+      {{ range $news }}
+      {{ $date   := dateFormat "January 2, 2006" .Date }}
+      {{ $author := .Params.author }}
+      <div class="column is-half">
+        <a href="{{ .RelPermalink }}">
+          <div class="card">
+            <div class="card-content">
+              <p class="title has-text-primary is-size-4 is-size-5-mobile is-spaced has-text-weight-bold">
+                {{ .Title }}
+              </p>
+
+              <p>
+                {{ with $date }}<span class="has-text-weight-medium">{{ . }}</span>{{ end }}{{ if and $date $author }}&nbsp;&nbsp;&nbsp;<i class="fas fa-ellipsis-v has-text-primary"></i>&nbsp;&nbsp;&nbsp;{{ end }}
+                {{ with $author }}<span class="has-text-weight-bold">{{ . }}</span>{{ end }}
+              </p>
+
+              {{ with .Summary }}
+              <hr />
+
+              <p class="subtitle is-size-5 is-size-6-mobile">
+                {{ . }}
+              </p>
+              {{ end }}
+            </div>
+          </div>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

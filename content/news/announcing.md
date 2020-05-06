@@ -1,8 +1,8 @@
 ---
-title: Announcing My Foundation!
+title: Announcing the LFData Foundation!
 layout: news-item
 date: 2019-08-02
-author: Foundy McFoundationface
+author: John Mertic
 ---
 
-We're pleased to announce the formation of My Foundation!
+This is gonna be great, y'all!

@@ -23,8 +23,8 @@
         {{ range $menu }}
         {{ if .HasChildren }}
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link is-size-5 is-arrowless"{{ with .URL }} href="{{ . }}"{{ end }}>
-            {{ .Name }}
+          <a class="navbar-link is-size-5 is-arrowless has-text-weight-bold"{{ with .URL }} href="{{ . }}"{{ end }}>
+            {{ .Name | upper }}
           </a>
 
           <div class="navbar-dropdown is-radiusless">
@@ -36,8 +36,8 @@
           </div>
         </div>
         {{ else }}
-        <a class="navbar-item is-size-5" href="{{ .URL }}">
-          {{ .Name }}
+        <a class="navbar-item is-size-5 has-text-weight-bold" href="{{ .URL }}">
+          {{ .Name | upper }}
         </a>
         {{ end }}
         {{ end }}
